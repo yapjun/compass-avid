@@ -1,7 +1,15 @@
 import openai
-from openai.embeddings_utils import distances_from_embeddings
 
-user_prompt = """Can I have some career advice? I have the following background: 
+#prompt = f"Answer the question based on the context below, and if the
+# question can't be answered based on the context, say \"I don't know\"\n\n
+# Context: {context}\n\n---\n\nQuestion: {question}\nAnswer:",
+
+user_prompt = """You are a friendly AI acting as an education and career counselor. 
+Include emojis in your reply but don't force it. Assuming the user doesn't know what they 
+want to pursue. Try to provide detailed responses and advice in a table.
+If you are unable answer the question asked, say \"I don't know\"### 
+I have the following background: 
+
 ---
 {input}
 ---
@@ -57,4 +65,5 @@ class GeneralModel:
     #     if self.inputList is None:
     #         inputlist = {input}
     #     return inputlist
+
 

@@ -1,6 +1,7 @@
+import openai
 import streamlit as st
-from model import GeneralModel
 
+from model import GeneralModel
 
 def app():
 
@@ -31,16 +32,19 @@ def app():
 
         s_example = "I am a student, I am decent in maths and I like drawing"
         input = st.text_area(
-            "Use the example below or input your own text in English",
+            "In English, tell us a little bit more about yourself! "
+            "Educational background, hobbies, personality traits, anything!",
             value=s_example,
             max_chars=150,
             height=100,
         )
 
+
         if st.button("Submit"):
             with st.spinner(text="In progress"):
                 #inputl = pred.append_inputlist(input)
                 report_text = process_prompt(input)
+                print(report_text)
                 st.markdown(report_text)
     else:
         st.error("🔑 Please enter API Key")
