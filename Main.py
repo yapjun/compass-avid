@@ -11,8 +11,15 @@ def app():
     # Using the streamlit cache
     @st.cache
     def process_prompt(input):
-
+        # inp = str_conc(input)
+        # print(inp)
         return pred.model_prediction(input=input.strip() , api_key=api_key)
+
+    # def str_conc(input):
+    #     str = ""
+    #     for each in input:
+    #         str = str + "." + each
+    #     return str
 
     if api_key:
 
@@ -31,7 +38,10 @@ def app():
 
         if st.button("Submit"):
             with st.spinner(text="In progress"):
+                #inputl = pred.append_inputlist(input)
                 report_text = process_prompt(input)
+                for each in input:
+                    st.markdown(each)
                 st.markdown(report_text)
     else:
         st.error("🔑 Please enter API Key")

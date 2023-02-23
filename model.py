@@ -1,7 +1,7 @@
 import openai
 
 
-poem = """Can I have some career advice? I have the following background: 
+user_prompt= """Can I have some career advice? I have the following background: 
 ---
 {input}
 ---
@@ -12,7 +12,9 @@ def set_openai_key(key):
     openai.api_key = key
 
 class GeneralModel:
+
     def __init__(self):
+        self.inputList = None
         print("Model Intilization--->")
         #set_openai_key(API_KEY)
 
@@ -49,5 +51,11 @@ class GeneralModel:
         """
         # Setting the OpenAI API key got from the OpenAI dashboard
         set_openai_key(api_key)
-        output = self.query(poem.format(input = input))
+        output = self.query(user_prompt.format(input = input))
         return output
+
+    # def append_inputlist(self, input):
+    #     if self.inputList is None:
+    #         inputlist = {input}
+    #     return inputlist
+
