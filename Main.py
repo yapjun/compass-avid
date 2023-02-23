@@ -1,15 +1,13 @@
 import streamlit as st
 from model import GeneralModel
 
-api_key = "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"
-
 
 def app():
 
     # Creating an object of prediction service
     pred = GeneralModel()
 
-    ## api_key = st.sidebar.text_input("APIkey", type="password")
+    api_key = st.sidebar.text_input("APIkey", type="password")
     # Using the streamlit cache
     @st.cache
     def process_prompt(input):

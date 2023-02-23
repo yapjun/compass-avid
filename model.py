@@ -1,26 +1,4 @@
 import openai
-# API KEY
-# API KEY
-# API KEY
-# API KEY
-# API KEY
-# API KEY
-# API KEY
-# API KEY
-# API KEY
-# API KEY
-# API KEY
-# API KEY
-# API KEY
-# API KEY
-# API KEY
-# API KEY
-# API KEY
-# API KEY
-# API KEY
-# API KEY
-# API KEY
-API_KEY = "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"
 
 
 poem = """Can I have some career advice? I have the following background: 
@@ -36,7 +14,7 @@ def set_openai_key(key):
 class GeneralModel:
     def __init__(self):
         print("Model Intilization--->")
-        set_openai_key(API_KEY)
+        #set_openai_key(API_KEY)
 
     def query(self, prompt, myKwargs={}):
         """
