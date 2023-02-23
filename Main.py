@@ -1,7 +1,7 @@
 import streamlit as st
 from model import GeneralModel
 
-api_key = "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"
+api_key = "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"
 
 
 def app():

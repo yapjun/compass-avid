@@ -20,7 +20,7 @@ import openai
 # API KEY
 # API KEY
 # API KEY
-API_KEY = "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"
+API_KEY = "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"
 
 
 poem = """Can I have some career advice? I have the following background: 
