@@ -9,6 +9,7 @@ def app():
 
     api_key = st.sidebar.text_input("APIkey", type="password")
     # Using the streamlit cache
+
     @st.cache
     def process_prompt(input):
         # inp = str_conc(input)
@@ -40,8 +41,6 @@ def app():
             with st.spinner(text="In progress"):
                 #inputl = pred.append_inputlist(input)
                 report_text = process_prompt(input)
-                for each in input:
-                    st.markdown(each)
                 st.markdown(report_text)
     else:
         st.error("🔑 Please enter API Key")

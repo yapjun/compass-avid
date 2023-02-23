@@ -1,22 +1,22 @@
 import openai
 
-
-user_prompt= """Can I have some career advice? I have the following background: 
+user_prompt = """Can I have some career advice? I have the following background: 
 ---
 {input}
 ---
 I would advise: """
 
+
 def set_openai_key(key):
     """Sets OpenAI key."""
     openai.api_key = key
 
+
 class GeneralModel:
 
     def __init__(self):
-        self.inputList = None
-        print("Model Intilization--->")
-        #set_openai_key(API_KEY)
+        print("Model Initialization--->")
+        # set_openai_key(API_KEY)
 
     def query(self, prompt, myKwargs={}):
         """
@@ -35,10 +35,8 @@ class GeneralModel:
             "stop": ["###"],
         }
 
-
         for kwarg in myKwargs:
             kwargs[kwarg] = myKwargs[kwarg]
-
 
         r = openai.Completion.create(prompt=prompt, **kwargs)["choices"][0][
             "text"
@@ -51,11 +49,10 @@ class GeneralModel:
         """
         # Setting the OpenAI API key got from the OpenAI dashboard
         set_openai_key(api_key)
-        output = self.query(user_prompt.format(input = input))
+        output = self.query(user_prompt.format(input=input))
         return output
 
     # def append_inputlist(self, input):
     #     if self.inputList is None:
     #         inputlist = {input}
     #     return inputlist
-
