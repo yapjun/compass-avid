@@ -1,4 +1,27 @@
 import openai
+# API KEY
+# API KEY
+# API KEY
+# API KEY
+# API KEY
+# API KEY
+# API KEY
+# API KEY
+# API KEY
+# API KEY
+# API KEY
+# API KEY
+# API KEY
+# API KEY
+# API KEY
+# API KEY
+# API KEY
+# API KEY
+# API KEY
+# API KEY
+# API KEY
+API_KEY = "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"
+
 
 poem = """Write a poem with the following words: 
 ---
@@ -13,7 +36,7 @@ def set_openai_key(key):
 class GeneralModel:
     def __init__(self):
         print("Model Intilization--->")
-        # set_openai_key(API_KEY)
+        set_openai_key(API_KEY)
 
     def query(self, prompt, myKwargs={}):
         """

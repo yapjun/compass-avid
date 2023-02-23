@@ -1,13 +1,15 @@
 import streamlit as st
 from model import GeneralModel
 
+api_key = "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"
+
 
 def app():
 
     # Creating an object of prediction service
     pred = GeneralModel()
 
-    api_key = st.sidebar.text_input("APIkey", type="password")
+    ## api_key = st.sidebar.text_input("APIkey", type="password")
     # Using the streamlit cache
     @st.cache
     def process_prompt(input):
@@ -17,7 +19,7 @@ def app():
     if api_key:
 
         # Setting up the Title
-        st.title("Write a poem based on these words")
+        st.title("Poem Prompt")
 
         # st.write("---")
 
