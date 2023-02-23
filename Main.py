@@ -17,11 +17,11 @@ def app():
     if api_key:
 
         # Setting up the Title
-        st.title("Poem Prompt")
+        st.title("Career Advice")
 
         # st.write("---")
 
-        s_example = "Birds, flowers, love, sun"
+        s_example = "I am a student, I am decent in maths and I like drawing"
         input = st.text_area(
             "Use the example below or input your own text in English",
             value=s_example,
