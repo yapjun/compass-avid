@@ -23,11 +23,11 @@ import openai
 API_KEY = "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"
 
 
-poem = """Write a poem with the following words: 
+poem = """Can I have some career advice? I have the following background: 
 ---
 {input}
 ---
-This is the poem: """
+I would advise: """
 
 def set_openai_key(key):
     """Sets OpenAI key."""
