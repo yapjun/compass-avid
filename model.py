@@ -1,10 +1,11 @@
 import openai
+from openai.embeddings_utils import distances_from_embeddings
 
 user_prompt = """Can I have some career advice? I have the following background: 
 ---
 {input}
 ---
-I would advise: """
+ """
 
 
 def set_openai_key(key):
@@ -25,8 +26,8 @@ class GeneralModel:
 
         # arguments to send the API
         kwargs = {
-            "engine": "text-davinci-002",
-            "temperature": 0.85,
+            "engine": "text-davinci-003",
+            "temperature": 0.95,
             "max_tokens": 600,
             "best_of": 1,
             "top_p": 1,
@@ -56,3 +57,4 @@ class GeneralModel:
     #     if self.inputList is None:
     #         inputlist = {input}
     #     return inputlist
+
