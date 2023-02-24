@@ -20,6 +20,10 @@ def app():
     # Creating an object of prediction service
     pred = GeneralModel()
 
+
+    st.title("Compass AI")
+    st.caption("Transform your academic, professional, and personal "
+                 "development with individualized AI-powered guidance!")
     # Using the streamlit cache
     @st.cache
     def process_prompt(input, cv=False, career=False, edu=False, pd=False):
@@ -224,7 +228,7 @@ def app():
                 st.markdown(report_text)
 
     else:
-        st.error("🔑 Please enter API Key")
+        st.error("🔑 Please enter an API Key")
 
 
 
