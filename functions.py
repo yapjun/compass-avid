@@ -6,6 +6,7 @@ from pdfminer.layout import LAParams
 from pdfminer.pdfpage import PDFPage
 from io import StringIO
 import base64
+import os
 
 #------- OCR ------------
 import pdf2image
@@ -14,7 +15,11 @@ from pytesseract import Output, TesseractError
 
 @st.cache_data
 def images_to_txt(path, language):
-    images = pdf2image.convert_from_bytes(path, poppler_path=r'resources\poppler-0.68.0\bin')
+    absolute_path = os.path.dirname(__file__)
+    relative_path = "resources/poppler-0.68.0/bin"
+    full_path = os.path.join(absolute_path, relative_path)
+    images = pdf2image.convert_from_bytes(path, 500, poppler_path=full_path)
+
     all_text = []
     for i in images:
         pil_im = i
@@ -102,6 +107,6 @@ def displayPDF(file):
 
     # Embedding PDF in HTML
     pdf_display = F'<iframe src="data:application/pdf;base64,{base64_pdf}" ' \
-                  F'width="700" height="1000" type="application/pdf"></iframe>'
+                  F'width="100%" height="1000" type="application/pdf"></iframe>'
     # Displaying File
     st.markdown(pdf_display, unsafe_allow_html=True)
