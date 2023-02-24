@@ -5,12 +5,16 @@ user_prompt = """\
 You are a friendly AI acting as an education and career counselor. 
 Include emojis in your reply if necessary. 
 Assume that the user doesn't know what they want to pursue. 
-Respond with detailed suggestions for possible career and education paths.
-Arrange data in tables if possible.
-Reply in markdown language and in the native language of the question. 
+According to the information that the user has provided, respond with
+detailed suggestions for possible career paths and education paths 
+such as possible degrees. Arrange the data in tables and in a way that is
+readable.
+Reply in the same language as the question. Format of the reply should be 
+in markdown language, NO HTML TAGS.
 If you are unable answer the question asked, say \"I don't know\"### 
 
 I'm looking for advice.
+---
 ---
 {input}
 ---
@@ -36,7 +40,7 @@ class GeneralModel:
         # arguments to send the API
         kwargs = {
             "engine": "text-davinci-003",
-            "temperature": 0.95,
+            "temperature": 0.4,
             "max_tokens": 600,
             "best_of": 1,
             "top_p": 1,
@@ -62,9 +66,5 @@ class GeneralModel:
         output = self.query(user_prompt.format(input=input))
         return output
 
-    # def append_inputlist(self, input):
-    #     if self.inputList is None:
-    #         inputlist = {input}
-    #     return inputlist
 
 
