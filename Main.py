@@ -166,7 +166,7 @@ def app():
             st.title("Career Advice")
 
             # example input
-            s_example = "I am a recent graduate. I am looking for ways to increase my chances" \
+            s_example = "I am a recent graduate. I am looking for ways to increase my chances " \
                         "of acquiring an internship. What can I do?"
             input = st.text_area(
                 "Tell us a little bit more about yourself! "
@@ -187,7 +187,8 @@ def app():
             st.title("Education Advice")
 
             # example input
-            s_example = "I am a high school student. I love writing and animals"
+            s_example = "I am in my final year of high school and I don't know where to go for" \
+                        " university. I am also a big animal lover. What are my options?"
             input = st.text_area(
                 "Tell us a little bit more about yourself! "
                 "Educational background, hobbies, personality traits, anything!",
