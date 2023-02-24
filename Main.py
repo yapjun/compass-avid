@@ -21,7 +21,7 @@ def app():
     pred = GeneralModel()
 
     # Using the streamlit cache
-    @st.cache_data
+    @st.cache
     def process_prompt(input, cv=False, career=False, edu=False, pd=False):
         if cv:
             return pred.model_prediction(input=input.strip(), api_key=api_key, cv=True)

@@ -13,7 +13,7 @@ import pdf2image
 import pytesseract
 from pytesseract import Output, TesseractError
 
-@st.cache_data
+@st.cache
 def images_to_txt(path, language):
     absolute_path = os.path.dirname(__file__)
     relative_path = "resources/poppler-0.68.0/bin"
@@ -31,7 +31,7 @@ def images_to_txt(path, language):
         all_text.append(text)
     return all_text, len(all_text)
 
-@st.cache_data
+@st.cache
 def convert_pdf_to_txt_pages(path):
     texts = []
     rsrcmgr = PDFResourceManager()
@@ -60,7 +60,7 @@ def convert_pdf_to_txt_pages(path):
     retstr.close()
     return texts, nbPages
 
-@st.cache_data
+@st.cache
 def convert_pdf_to_txt_file(path):
     texts = []
     rsrcmgr = PDFResourceManager()
