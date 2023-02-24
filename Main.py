@@ -21,7 +21,7 @@ def app():
     pred = GeneralModel()
 
 
-    st.title("Compass AI")
+    st.title("Compass AI 🧭")
     st.caption("Transform your academic, professional, and personal "
                  "development with individualized AI-powered guidance!")
     # Using the streamlit cache
