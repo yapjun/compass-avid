@@ -50,3 +50,7 @@ GitHub: [@yapjun](https://github.com/yapjun/)<br>
 Email: <a>samuelkong@protonmail.com</a><br>
 GitHub: [@smlkg](https://github.com/smlkg)<br>
 
+**Hagar Fisher**<br>
+Email: <a>hagar.fisher1001@gmail.com</a><br>
+GitHub: [@HuggingFish](https://github.com/huggingfish)<br>
+
