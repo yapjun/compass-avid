@@ -1,6 +1,11 @@
-# Career Advice Bot 
+# Compass AI (Career Advice Bot) 🧭
 > created from GPT-3 Streamlit boilerplate
 
+The application is also hosted on StreamLit and can be accessed from **[this site](https://compass-ai-eu.streamlit.app/)**. Developed for [LabLabAI's Startup Hackathon event](https://lablab.ai/event/ai-startup-hackathon) hosted from the 17th to the 24th Feb 2023.
+<br>
+<br>
+
+## About the application
 Compass AI is an AI-powered service that provides tailored advice and CV feedback to users. We aim to address the growing demand for personalised education advice and career guidance by offering a unique solution utilising OpenAI’s GPT-3 technology.
 
 ---
@@ -20,12 +25,28 @@ streamlit run gpt_app.py
 6. The application should pop up on your browser window.
 
 ---
-
-# Using the application
+## Usage
+### Setting up the application
 1. Get your API key from https://beta.openai.com > Profile > View API keys > Create new secret key
 2. Enter your API key on the left sidebar
-3. Enter a prompt
-4. Click on the Submit button for a response.
+
+<br>
+
+**CV checker**
+1. Upload your CV
+2. Click on the 'Check my CV' button for a response.
+
+**Advice bots**
+1. Enter your prompt
+2. Click on the 'Submit' button for a response.
 
 ---
+### Contributors
+**Daphne Yap** <br>
+Email: <a>daphneyapjy@hotmail.com</a><br>
+GitHub: [@yapjun](https://github.com/yapjun/)<br>
+
+**Samuel Kong**<br>
+Email: <a>samuelkong@protonmail.com</a><br>
+GitHub: [@smlkg](https://github.com/smlkg)<br>
 
